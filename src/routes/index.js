@@ -17,24 +17,29 @@ export const router = new VueRouter ({
         redirect:'/news',
     },
     {
+        name : 'news',
         path:'/news',
         component:NewsView,
+
     },
     {
+        name : 'ask',
         path:'/asks',
         component:AsksView,
     },
     {
+        name : 'jobs',
         path:'/jobs',
         component:JobsView,
     },
     {
-        path:'/users',
+        path:'/user/:id',
         component:UserView,
     },
     {
         path:'/items',
         component:ItemView,
     }
+
   ]
 });

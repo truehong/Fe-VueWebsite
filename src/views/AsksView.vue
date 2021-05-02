@@ -1,33 +1,22 @@
 <template>
     <div>
-        <div v-for="ask in asks"> {{ ask.title }} </div>
+         <p v-for="item in this.$store.state.asks">
+            <a v-bind:href="item.url">   {{ item.title }} </a>
+            <small> {{ item.time_ago }} by {{item.user }}</small>
+        </p>
     </div>
 </template>
 
 <script>
-import { fetchAskList } from '../api/index.js'
+
 export default {
-    data() {
-        return {
-            asks : []
-        }
-    },
-    
+   
     // created, beforeMount 에서 주로 활용
     created() {
-       var vm = this; 
-       fetchAskList()
-            .then(function(response){
-               vm.asks = response.data
-            })
-            .catch(function(error){
-                console.log(error);
-            });
+        this.$store.dispatch("FETCH_ASKS");
     }
 
 }
 </script>
-
 <style>
-
 </style>
