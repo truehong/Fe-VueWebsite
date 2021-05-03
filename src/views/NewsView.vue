@@ -53,8 +53,4 @@ export default {
 </script>
 
 <style>
- a {
-    z-index:1;
- }
-
 </style>

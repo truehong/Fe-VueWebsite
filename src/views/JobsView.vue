@@ -1,11 +1,10 @@
 <template>
   <div>
-    <p v-for="job in this.$store.state.jobs">
+    <div class="job" v-for="job in this.$store.state.jobs">
+     
       <a v-bind:href="job.url"> {{ job.title }} </a>
-      <small> 
-          {{ job.time_ago }} , by {{ job.domain }}
-      </small>
-    </p>
+      <small> {{ job.time_ago }} , by {{ job.domain }} </small>
+    </div>
   </div>
 </template>
 
@@ -17,4 +16,5 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss">
+</style>

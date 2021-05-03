@@ -1,61 +1,26 @@
 <template>
-  <nav class="navbar">
-    <div class="navbar_logo">
-      <i> </i>
-      <a href="">Developer</a>
+ <!-- Navbar -->
+  <nav id="navbar">
+    <div class="navbar__logo">
+      <i class="fab fa-accusoft"> </i>
+      <router-link to="/home">Developer</router-link>
     </div>
-    <ul class="navbar_menu">
 
-      <router-link to="/news"><li>News</li></router-link>
-
-      <router-link to="/asks"><li>Asks</li> </router-link>
-
-      <router-link to="/jobs"><li>Jobs</li> </router-link>
+    <ul class="navbar__menu">
+      <li class="navbar__menu__item"><router-link to="/home">Home</router-link></li>
+      <li class="navbar__menu__item"><router-link to="/news">News</router-link></li>
+      <router-link to="/asks"><li class="navbar__menu__item">Asks</li></router-link>
+      <router-link to="/jobs"><li class="navbar__menu__item">Jobs</li></router-link>
+      <li class="navbar__menu__item"> etc </li>
     </ul>
-    <ul class="navbar_links">
-      <i>A</i>
-      <i>B</i>
+
+    <ul class="navbar_icons">
+      <li><i class="fab fa-twitter"></i></li>
+      <li><i class="fab fa-facebook-f"></i></li>
     </ul>
   </nav>
 </template>
 
 <style lang="scss">
-body {
-  margin: 0;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #263343;
-  padding: 8px 12px;
-  a {
-    text-decoration: none;
-    color: white;
-  }
-
-  li {
-    text-decoration: none;
-    padding : 8px 12px;
-    list-style: none;
-  }
-
-  .navbar_log {
-    font-size: 24px;
-    color: white;
-  }
-
-  .navbar_log i {
-    font-size: 24px;
-    color: white;
-  }
-  i {
-    color: white;
-  }
-  .navbar_menu {
-      display: flex;
-      padding-left: 0;
-  }
-}
+@import '../style.css';
 </style>
