@@ -20,33 +20,11 @@
 </template>
 
 <script>
-import { fetchNewsList } from "../api/index.js";
-
 export default {
-  computed: {
-    //...mapGetters([
-    //  'fetchedNews'
-    //])
-    //   newsItems :'fetchedNews'
-    //})
-    //#3
-    //...mapGetters({
-    //   newsItems :'fetchedNews'
-    //})
-    //#2
-    //...mapState({
-    //  news : state => state.news
-    //})
-    //#1
-    //ask(){
-    //  return this.s$$store.state.ask;
-    //}
-  },
   created() {
     this.$store.dispatch("FETCH_NEWS");
   },
 };
 </script>
 
-<style>
-</style>
+<style></style>

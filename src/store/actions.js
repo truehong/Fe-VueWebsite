@@ -2,7 +2,10 @@
 import { fetchNewsList, 
          fetchAskList, 
          fetchJobsList, 
-         fetchUserInfo} from '../api/index.js';
+         fetchUserInfo,
+         fetchCommentItem
+
+        } from '../api/index.js';
 
 export default {
       // context로 mutation 접근 가능
@@ -42,5 +45,14 @@ export default {
         }).catch(error => {
             console.log(error);
         })
+    },
+    FETCH_ITEM({ commit }, id) {
+        fetchCommentItem(id)
+        .then(({ data }) => {
+            commit('SET_ITEM', data);
+        }).catch(error => {
+            console.log(error);
+        })
     }
+
 }
